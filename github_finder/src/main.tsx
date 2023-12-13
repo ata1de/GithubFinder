@@ -5,6 +5,7 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routers/Home.tsx'
+import Repos from './routers/Repos.tsx'
 
 const router  = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router  = createBrowserRouter([
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/repos/:username',
+        element: <Repos />
       }
     ]
 
