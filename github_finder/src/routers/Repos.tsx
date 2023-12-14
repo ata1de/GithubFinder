@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import Project from "../components/Project";
+import classes from '../style/Repos.module.css'
 
-// Defina o tipo ReposProps
-type ReposProps = {
-    stargazers_count: number;
-    language: string;
-    forks_count: number;
-    name: string; // Adicione outras propriedades conforme necessário
-}
+import { ReposProps } from "../types/user";
 
 const Repos = () => {
     const { username } = useParams();
@@ -18,8 +13,18 @@ const Repos = () => {
     const loadRepos = async () => {
         const res = await fetch(`https://api.github.com/users/${username}/repos`);
         const data: ReposProps[] = await res.json(); // Defina o tipo para ReposProps[]
-        setRepos(data);
-        console.log(data);
+
+        // Função para ordenar os elementos pelo número de estrelas, e pelos forks
+        const sortedRepos = data.sort((a, b) => {
+          if (b.stargazers_count !== a.stargazers_count) {
+            return b.stargazers_count - a.stargazers_count;
+          } else {
+            return b.forks_count - a.forks_count;
+          }
+        });
+
+        setRepos(sortedRepos);
+        console.log(sortedRepos);
 
     };
 
@@ -28,10 +33,10 @@ const Repos = () => {
     }, []);
 
     return (
-        <div>
+        <div className={classes.repos}>
             {/* Aqui você pode renderizar os dados dos repositórios, por exemplo: */}
             <ul>
-                {repos.map(repo => (
+                {repos.slice(0,5).map(repo => (
                     <Project key={repo.name} repo={repo} />
                 ))}
             </ul>

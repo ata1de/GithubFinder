@@ -4,7 +4,7 @@ type SearchProps = {
     loadUser: (userName:string) => Promise<void>;
 }
 
-import classes from './Search.module.css'
+import classes from '../style/Search.module.css'
 import {BsSearch} from 'react-icons/bs'
 
 const Search = ({loadUser}:SearchProps) => {

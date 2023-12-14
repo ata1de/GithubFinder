@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Search from '../components/Search'
 import { UserpProps } from '../types/user'
 import User from '../components/User'
