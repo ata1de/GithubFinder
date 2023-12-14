@@ -1,6 +1,18 @@
-.project {
+.project li{
     text-decoration: none;
-    background-color: #9da5d1;
-    margin-bottom: 2rem;
-
+    background-color: #0e1129;
+    margin: 2rem;
+    width: 400px;
+    height: 200px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.486);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+.project li div{
+    display: flex;
+}
+

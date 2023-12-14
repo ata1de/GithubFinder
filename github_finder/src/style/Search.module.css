@@ -16,11 +16,12 @@
     padding: .6rem;
     border-radius: 8px;
     border: none;
+    font-size: 1.2rem;
 
 }
 
 .search button{
-    padding: .6rem;
+    padding: 1rem;
     background-color: #0e1129;
     border-radius: 8px;
     cursor: pointer;
