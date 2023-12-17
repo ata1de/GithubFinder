@@ -9,11 +9,17 @@ const Project = ({repo}:RepoItemProps) => {
         <li>
             <h2>{repo.name}</h2>
             <p> <MdCode /> {repo.language}</p>
-            <div>
-              <p> <IoMdGitBranch /> {repo.forks_count}</p>
-              <p> <MdStar /> {repo.stargazers_count} </p>
+
+            <div className={classes.stats}>
+              <div>
+                <p className={classes.icons}> <IoMdGitBranch /></p>
+                <p>{repo.forks_count}</p>
+              </div>
+              <div>
+                <p className={classes.icons}> <MdStar /></p>
+                <p>{repo.stargazers_count}</p>
+              </div>
             </div>
-            {/* Adicione outras propriedades conforme necessário */}
         </li>
     </div>
   )
