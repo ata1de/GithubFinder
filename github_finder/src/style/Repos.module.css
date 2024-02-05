@@ -7,3 +7,7 @@
     border-radius: 10px;
     list-style: none;
 }
+
+.repos button{
+    left: 0;
+}

@@ -34,12 +34,14 @@ const Repos = () => {
 
     return (
         <div className={classes.repos}>
+            <div>
+                <ul>
+                    {repos.slice(0,5).map(repo => (
+                        <Project key={repo.name} repo={repo} />
+                    ))}
+                </ul>
+            </div>
             {/* Aqui você pode renderizar os dados dos repositórios, por exemplo: */}
-            <ul>
-                {repos.slice(0,5).map(repo => (
-                    <Project key={repo.name} repo={repo} />
-                ))}
-            </ul>
         </div>
     );
 }

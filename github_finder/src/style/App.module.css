@@ -7,3 +7,21 @@
     text-align: center;
     margin-bottom: 1.5rem
 }
+
+.goBackButton {
+    padding: 0.6rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+  }
+  
+  .goBackButton:hover {
+    background-color: #0056b3;
+  }
+
+  .alignLeft {
+    margin-left: auto; /* Empurra o link do botão para a esquerda */
+    margin-top: 1rem;
+  }
