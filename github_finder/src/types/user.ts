@@ -12,6 +12,8 @@ export type ReposProps = {
     stargazers_count: number;
     language: string;
     forks_count: number
+    html_url: string;
+
 }
 
 
@@ -21,5 +23,6 @@ export type RepoItemProps = {
       language: string;
       forks_count: number;
       name: string;
+      html_url: string;
     };
   };
