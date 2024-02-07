@@ -10,7 +10,7 @@ Follow the commands below and enjoy the project
 ⚠ Need to node installed on your machine
 - Clone the repository
 ```
-git clone https://github.com/ata1de/PowerBi.git
+https://github.com/ata1de/GithubFinder.git
 ```
 - Install dependencies
 ```
