@@ -16,7 +16,6 @@ export type ReposProps = {
 
 }
 
-
 export type RepoItemProps = {
     repo: {
       stargazers_count: number;

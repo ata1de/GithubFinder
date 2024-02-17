@@ -1,5 +1,4 @@
 // App.tsx
-import React from 'react';
 import { Outlet, useLocation, Link } from 'react-router-dom';
 import classes from './style/App.module.css';
 
